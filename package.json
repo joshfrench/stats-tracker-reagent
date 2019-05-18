@@ -2,6 +2,9 @@
   "name": "stats-reagent",
   "version": "0.0.1",
   "private": true,
+  "scripts": {
+    "test": "shadow-cljs watch test"
+  },
   "devDependencies": {
     "shadow-cljs": "2.8.37"
   },
