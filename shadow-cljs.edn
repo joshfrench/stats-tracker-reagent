@@ -5,7 +5,15 @@
   "src/test"]
 
  :dependencies
- []
+ [[reagent "0.8.1"]]
+
+ :dev-http
+ {8080 "public"}
 
  :builds
- {}}
+ {:app  {:target :browser
+         :modules {:main {:init-fn stats.core/init}}}
+  :test {:target :browser-test
+         :test-dir "public/js/test"
+         :devtools {:http-port 8088
+                    :http-root "public/js/test"}}}}
